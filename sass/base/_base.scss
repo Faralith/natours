@@ -6,6 +6,11 @@
   box-sizing: inherit;
 }
 
+::selection {
+  background: $primary-colour;
+  color: $white;
+}
+
 html {
   //This defines 1rem as 10px where the user has a default font size of 16px
   font-size: 62.5%;
