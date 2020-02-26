@@ -1,11 +1,11 @@
 {
   "name": "natours",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "watch": "node-sass --watch sass -o css --output-style compressed",
-    "dev": "node-sass sass -o css",
+    "watch": "node-sass --watch sass -o css --output-style nested",
+    "dev": "node-sass sass -o css --output-style nested",
     "production": "node-sass sass -o css --output-style compressed"
   },
   "repository": {
@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/Faralith/natours/issues"
   },
-  "homepage": "https://github.com/Faralith/natours#readme",
+  "homepage": "https://github.com/Faralith/natours",
   "devDependencies": {
     "node-sass": "^4.13.1"
   }
