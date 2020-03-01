@@ -7,22 +7,43 @@
   &__input{
     font-size: 1.5rem;
     font-family: inherit;
+    color: inherit;
     padding: 1.5rem 2rem;
     border-radius: $border-radius-sm;
     background-color: rgba($white, .5);
-    border: none;
+    border: none;   
     border-bottom: .3rem solid transparent;
-    width: 100%;
+    width: 90%;
     display: block;
-  }
+    transition: all .3s;
 
-  &__input:focus{
-    outline: none;
-    box-shadow: 0 1rem 2rem (rgba($black, .1));
-    border-bottom: .3rem solid $primary-colour;
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem (rgba($black, .1));
+      border-bottom: .3rem solid $primary-colour;
+    }
+
+    &:focus:invalid{
+      border-bottom: .3rem solid $secondary-colour-dark;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $grey-dark-2;
+    }
   }
 
   &__label{
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: .7rem;
+    display: block;
+    transition: all .3s;
+  }
 
+  &__input:placeholder-shown + &__label{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
   }
 }
