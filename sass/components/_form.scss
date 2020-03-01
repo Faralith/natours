@@ -24,7 +24,7 @@
     }
 
     &:focus:invalid{
-      border-bottom: .3rem solid $secondary-colour-dark;
+      border-bottom: .3rem solid $tertiary-colour-dark;
     }
 
     &::-webkit-input-placeholder {

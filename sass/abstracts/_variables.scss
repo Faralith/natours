@@ -3,11 +3,11 @@ $primary-colour: #55c57a;
 $primary-colour-light: #7ed56f;
 $primary-colour-dark: #28b485;
 
-$secondary-colour-light: #ffb900;
-$secondary-colour-dark: #ff7730;
+$secondary-colour-light: #2998ff;
+$secondary-colour-dark: #5643fa;
 
-$tertiary-colour-light: #2998ff;
-$tertiary-colour-dark: #5643fa;
+$tertiary-colour-light: #ffb900;
+$tertiary-colour-dark: #ff7730;
 
 $grey: #777;
 $grey-light-1: #f7f7f7;
@@ -26,6 +26,9 @@ $grid-width: 114rem;
 $gutter-vertical: 8rem;
 $gutter-vertical-small: 6rem;
 $gutter-horizontal: 6rem;
+
+// RESPONSIVE BREAKPOINTS
+$breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
 
 // GENERIC
 $border-radius-sm: .5rem;
