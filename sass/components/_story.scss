@@ -18,6 +18,7 @@
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
     backface-visibility: hidden;
+    overflow: hidden;
   }
 
   &__image{
