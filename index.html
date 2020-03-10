@@ -49,12 +49,12 @@
   <main>
     <section id="section-about">
       <div class="center-text mb-lg">
-        <h2 class="heading-secondary">
+        <h2 class="heading-secondary" data-aos="zoom-in">
           Exciting tours for adventourous people
         </h2>
       </div>
       <div class="row">
-        <div class="col-1-of-2">
+        <div class="col-1-of-2" data-aos="fade-right">
           <h3 class="heading-tertiary mb-sm">
             You're going to fall in love with nature
           </h3>
@@ -70,7 +70,7 @@
           </p>
           <a href="#" class="btn-text">Learn more &rarr;</a>
         </div>
-        <div class="col-1-of-2">
+        <div class="col-1-of-2" data-aos="fade-left">
           <div class="composition">
             <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
             <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
@@ -81,7 +81,7 @@
     </section>
     <section id="section-features">
       <div class="row">
-        <div class="col-1-of-4">
+        <div class="col-1-of-4" data-aos="fade-right">
           <div class="feature-box">
             <i class="feature-box__icon icon-basic-world"></i>
             <h3 class="heading-tertiary mb-sm">
@@ -92,7 +92,7 @@
             </p>
           </div>
         </div>
-        <div class="col-1-of-4">
+        <div class="col-1-of-4" data-aos="zoom-in-up">
           <div class="feature-box">
             <i class="feature-box__icon icon-basic-compass"></i>
             <h3 class="heading-tertiary mb-sm">
@@ -103,7 +103,7 @@
             </p>
           </div>
         </div>
-        <div class="col-1-of-4">
+        <div class="col-1-of-4" data-aos="zoom-in-up">
           <div class="feature-box">
             <i class="feature-box__icon icon-basic-map"></i>
             <h3 class="heading-tertiary mb-sm">
@@ -114,7 +114,7 @@
             </p>
           </div>
         </div>
-        <div class="col-1-of-4">
+        <div class="col-1-of-4" data-aos="fade-left">
           <div class="feature-box">
             <i class="feature-box__icon icon-basic-heart"></i>
             <h3 class="heading-tertiary mb-sm">
@@ -129,13 +129,13 @@
     </section>
     <section id="section-tours">
       <div class="center-text mb-lg">
-        <h2 class="heading-secondary">
+        <h2 class="heading-secondary" data-aos="zoom-in">
           Most popular tours
         </h2>
       </div>
       <div class="row">
         <div class="col-1-of-3">
-          <div class="card">
+          <div class="card" data-aos="fade-right">
             <div class="card__side card__side--front">
               <div class="card__picture card__picture--1">
                 &nbsp;
@@ -167,7 +167,7 @@
           </div>
         </div>
         <div class="col-1-of-3">
-          <div class="card">
+          <div class="card" data-aos="zoom-in">
             <div class="card__side card__side--front">
               <div class="card__picture card__picture--2">
                 &nbsp;
@@ -199,7 +199,7 @@
           </div>
         </div>
         <div class="col-1-of-3">
-          <div class="card">
+          <div class="card" data-aos="fade-left">
             <div class="card__side card__side--front">
               <div class="card__picture card__picture--3">
                 &nbsp;
@@ -244,11 +244,11 @@
         </video>
       </div>
       <div class="center-text mb-lg">
-        <h2 class="heading-secondary">
+        <h2 class="heading-secondary" data-aos="zoom-in">
           We make people genuinely happy
         </h2>
       </div>
-      <div class="row">
+      <div class="row" data-aos="fade-right">
         <div class="story">
           <figure class="story__shape">
             <img src="img/nat-8.jpg" alt="Person on a tour" class="story__image" />
@@ -266,7 +266,7 @@
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row" data-aos="fade-left">
         <div class="story">
           <figure class="story__shape">
             <img src="img/nat-9.jpg" alt="Person on a tour" class="story__image" />
@@ -290,7 +290,7 @@
     </section>
     <section id="section-bookings">
       <div class="row">
-        <div class="bookings">
+        <div class="bookings" data-aos="zoom-in">
           <div class="bookings__form">
             <form action="#" class="form">
               <div class="left-text mb-md">
@@ -382,10 +382,10 @@
       </div>
     </div>
   </div>
+  <script type="text/javascript" src="js/aos.js"></script>
   <script>
-    function closeNavigation(){
-      document.getElementById('nav-toggle').checked=false;
-    }
+    function closeNavigation(){document.getElementById('nav-toggle').checked=false;}
+    AOS.init({duration:1500});
   </script>
 </body>
 
