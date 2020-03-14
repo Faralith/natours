@@ -12,12 +12,19 @@ body {
   backface-visibility: hidden;
   margin-bottom: 6rem;
 
+  
+
   &--main {
     display: block;
     font-size: 6rem;
     font-weight: 400;
     letter-spacing: 3.5rem;
     animation: moveInLeft 1s ease-out;
+
+    @include breakpoint-below(sm) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
   }
 
   &--sub {
@@ -26,6 +33,11 @@ body {
     font-weight: 700;
     letter-spacing: 1.75rem;
     animation: moveInRight 1s ease-out;
+
+    @include breakpoint-below(sm) {
+      letter-spacing: .5rem;
+      
+    }
   }
 }
 
@@ -39,6 +51,13 @@ body {
   color: transparent;
   letter-spacing: .2rem;
   transition: all .2s;
+
+  @include breakpoint-below(md) {
+    font-size: 3rem;
+  }
+  @include breakpoint-below(sm) {
+    font-size: 2.5rem;
+  }
 
   &:hover{
     transform: skewY(2deg) skewX(10deg) scale(1.1);

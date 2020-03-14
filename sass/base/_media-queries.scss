@@ -21,7 +21,7 @@
     // Get the breakpoint value.
     $breakpoint-value: map-get($breakpoints, $breakpoint);
     // Write the media query.
-    @media only screen and (max-width: ($breakpoint-value - 1)) {
+    @media only screen and (max-width: ($breakpoint-value)) {
       @content;
     }
   }
@@ -60,22 +60,22 @@
 
 @mixin responsive-below($breakpoint) {
   @if $breakpoint==sm {
-    @media only screen and (max-width: 576px) {
+    @media only screen and (max-width: 36em) {
       @content
     };
   }
   @elseif $breakpoint==md {
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 48em) {
       @content
     };
   }
   @elseif $breakpoint==lg {
-    @media only screen and (max-width: 992px) {
+    @media only screen and (max-width: 62em) {
       @content
     };
   }
   @elseif $breakpoint==xl {
-    @media only screen and (max-width: 1200px) {
+    @media only screen and (max-width: 75em) {
       @content
     };
   }

@@ -27,8 +27,17 @@ $gutter-vertical: 8rem;
 $gutter-vertical-small: 6rem;
 $gutter-horizontal: 6rem;
 
+/** Breakpoints
+
+sm: 576px = 36em
+md: 768px = 48em
+lg: 992px = 62em
+xl: 1200px = 75em
+
+Breakpoints ends **/
+
 // RESPONSIVE BREAKPOINTS
-$breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+$breakpoints: (xs: 0, sm: 36em, md: 48em, lg: 62em, xl: 75em);
 
 // GENERIC
 $border-radius-sm: .5rem;
