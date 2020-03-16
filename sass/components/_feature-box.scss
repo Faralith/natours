@@ -7,6 +7,18 @@
   box-shadow: 0 1.5rem 4rem rgba($black, .15);
   transition: transform .3s;
 
+  @include breakpoint-below(xl){
+    min-height: 36rem;
+  }
+
+  @include breakpoint-below(lg){
+    min-height: 44rem;
+  }
+
+  @include breakpoint-below(md){
+    min-height: initial;
+  }
+
   &__icon{
     font-size: 6rem;
     margin-bottom: .5rem;

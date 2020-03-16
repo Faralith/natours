@@ -1,9 +1,19 @@
 .row{
   max-width: $grid-width;
   margin: 0 auto;
+  padding-left: 4rem;
+  padding-right: 4rem;
+
+  @include breakpoint-below(lg){
+    max-width: $grid-width-lg;
+  }
 
   @include breakpoint-below(md){
-    max-width: 50rem;
+   max-width: $grid-width-md;
+  }
+
+  @include breakpoint-below(sm){
+    max-width: $grid-width-sm;
   }
 
   &:not(:last-child) {

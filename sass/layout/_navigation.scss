@@ -16,6 +16,21 @@
     box-shadow: 0rem 1rem 3rem rgba($black, .1);
     text-align: center;
     cursor: pointer;
+
+    @include breakpoint-below(lg){
+      top: 5rem;
+      right: 5rem;
+    }
+
+    @include breakpoint-below(md){
+      top: 4rem;
+      right: 4rem;
+    }
+
+    @include breakpoint-below(sm){
+      top: 3rem;
+      right: 3rem;
+    }
   }
 
   &__background{
@@ -28,6 +43,21 @@
     background-image: radial-gradient($primary-colour-light, $primary-colour-dark);
     z-index: 1000;
     transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+
+    @include breakpoint-below(lg){
+      top: 5.5rem;
+      right: 5.5rem;
+    }
+
+    @include breakpoint-below(md){
+      top: 4.5rem;
+      right: 4.5rem;
+    }
+
+    @include breakpoint-below(sm){
+      top: 3.5rem;
+      right: 3.5rem;
+    }
   }
 
   &__nav{
