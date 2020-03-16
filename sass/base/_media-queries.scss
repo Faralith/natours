@@ -1,82 +1,42 @@
 @mixin breakpoint-above($breakpoint) {
-  // If the breakpoint exists in the map.
-  @if map-has-key($breakpoints, $breakpoint) {
-    // Get the breakpoint value.
-    $breakpoint-value: map-get($breakpoints, $breakpoint);
-    // Write the media query.
-    @media only screen and (min-width: $breakpoint-value) {
-      @content;
-    }
-  }
-  // If the breakpoint doesn't exist in the map.
-  @else {
-    // Log a warning.
-    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  // Get the breakpoint value.
+  $breakpoint-value: map-get($breakpoints, $breakpoint);
+  // Write the media query.
+  @media only screen and (min-width: $breakpoint-value) {
+    @content;
   }
 }
 
 @mixin breakpoint-below($breakpoint) {
-  // If the breakpoint exists in the map.
-  @if map-has-key($breakpoints, $breakpoint) {
-    // Get the breakpoint value.
-    $breakpoint-value: map-get($breakpoints, $breakpoint);
-    // Write the media query.
-    @media only screen and (max-width: ($breakpoint-value)) {
-      @content;
-    }
-  }
-  // If the breakpoint doesn't exist in the map.
-  @else {
-    // Log a warning.
-    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  // Get the breakpoint value.
+  $breakpoint-value: map-get($breakpoints, $breakpoint);
+  // Write the media query.
+  @media only screen and (max-width: ($breakpoint-value)) {
+    @content;
   }
 }
 
 @mixin breakpoint-between($lower, $upper) {
-  // If both the lower and upper breakpoints exist in the map.
-  @if map-has-key($breakpoints, $lower) and map-has-key($breakpoints, $upper) {
-    // Get the lower and upper breakpoints.
-    $lower-breakpoint: map-get($breakpoints, $lower);
-    $upper-breakpoint: map-get($breakpoints, $upper);
-    // Write the media query.
-    @media only screen and (min-width: $lower-breakpoint) and (max-width: ($upper-breakpoint - 1)) {
-      @content;
-    }
-  }
-  // If one or both of the breakpoints don't exist.
-  @else {
-    // If lower breakpoint is invalid.
-    @if (map-has-key($breakpoints, $lower)==false) {
-      // Log a warning.
-      @warn 'Your lower breakpoint was invalid: #{$lower}.';
-    }
-    // If upper breakpoint is invalid.
-    @if (map-has-key($breakpoints, $upper)==false) {
-      // Log a warning.
-      @warn 'Your upper breakpoint was invalid: #{$upper}.';
-    }
+  // Get the lower and upper breakpoints.
+  $lower-breakpoint: map-get($breakpoints, $lower);
+  $upper-breakpoint: map-get($breakpoints, $upper);
+  // Write the media query.
+  @media only screen and (min-width: $lower-breakpoint) and (max-width: ($upper-breakpoint - 1)) {
+    @content;
   }
 }
 
-@mixin responsive-below($breakpoint) {
-  @if $breakpoint==sm {
-    @media only screen and (max-width: 36em) {
-      @content
-    };
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) { @content };    //600px
   }
-  @elseif $breakpoint==md {
-    @media only screen and (max-width: 48em) {
-      @content
-    };
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) { @content };     //900px
   }
-  @elseif $breakpoint==lg {
-    @media only screen and (max-width: 62em) {
-      @content
-    };
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) { @content };    //1200px
   }
-  @elseif $breakpoint==xl {
-    @media only screen and (max-width: 75em) {
-      @content
-    };
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) { @content };    //1800
   }
 }
