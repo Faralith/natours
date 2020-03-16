@@ -2,8 +2,16 @@
   max-width: $grid-width;
   margin: 0 auto;
 
+  @include breakpoint-below(md){
+    max-width: 50rem;
+  }
+
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+
+    @include breakpoint-below(md){
+       margin-bottom: $gutter-vertical-small;
+    }
   }
 
   @include clearfix;
@@ -13,6 +21,15 @@
 
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+
+      @include breakpoint-below(md){
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-small;
+      }
+    }
+
+    @include breakpoint-below(md){
+      width: 100%!important; 
     }
   }
 
