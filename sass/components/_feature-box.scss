@@ -12,11 +12,12 @@
   }
 
   @include breakpoint-below(lg){
-    min-height: 44rem;
+    min-height: 40rem;
   }
 
   @include breakpoint-below(md){
     min-height: initial;
+    padding: 2rem;
   }
 
   &__icon{
@@ -26,6 +27,10 @@
     background-image: linear-gradient(to right, $primary-colour-light, $primary-colour-dark);
     -webkit-background-clip: text;
     color: transparent;
+
+    @include breakpoint-below(md){
+      margin-bottom: 0;
+    }
   }
 
   &:hover{

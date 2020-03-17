@@ -4,8 +4,12 @@
   margin-top: -20vh;
   overflow-x: hidden;
 
+  @include breakpoint-below(md){
+   padding-bottom: 20rem;
+  }
+
   @include breakpoint-below(sm){
-    padding: 30rem 0;
+    padding-top:30rem;
   }
 }
 
