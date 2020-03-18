@@ -9,6 +9,16 @@
   font-size: $default-font-size;
   transform: skewX(-12deg);
 
+  @include breakpoint-below(md){
+    padding: 4rem;
+    padding-left: 7rem;
+    width: 100%
+  }
+
+  @include breakpoint-below(sm){
+    transform: skewX(0deg);
+  }
+
   &__shape{
     width: 15rem;
     height: 15rem;
@@ -19,6 +29,10 @@
     position: relative;
     backface-visibility: hidden;
     overflow: hidden;
+
+    @include breakpoint-below(sm){
+      transform: translateX(-3rem) skewX(0deg);
+    }
   }
 
   &__image{
@@ -29,6 +43,10 @@
 
   &__text{
     transform: skewX(12deg);
+
+    @include breakpoint-below(sm){
+      transform: skewX(0deg);
+    }
   }
 
   &__caption{
