@@ -1,7 +1,7 @@
 {
   "name": "natours",
   "version": "2.0.0",
-  "description": "",
+  "description": "Responsive SCSS Website",
   "main": "index.html",
   "scripts": {
     "watch": "node-sass --watch sass -o css --output-style nested",
